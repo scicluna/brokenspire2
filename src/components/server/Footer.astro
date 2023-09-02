@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faGithub,
+  faTwitter,
+  faFacebook,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
+import brokenSpireLogo from "../../images/brokenspirenologo.png"
+import drivethroughrpg from "../../images/drivethrurpg-logo.png"
+import Hoverlinks from "./Hoverlinks.astro"
+---
+
+<footer
+  class="flex flex-col gap-2 items-center h-96 min-h-[20%] relative bg-stone-700 text-stone-100 text-sm">
+  <div class="flex h-full w-full">
+    <div class="relative sm:m-8 sm:w-1/5 w-3/5">
+      <Image
+        src={brokenSpireLogo}
+        alt={"broken spire logo"}
+        class="sm:object-fill object-cover"
+      />
+    </div>
+    <div class="flex flex-col sm:w-4/5 w-2/5 md:gap-0 gap-4">
+      <div
+        class="grid md:grid-cols-4 md:grid-rows-2 grid-cols-1 h-16 m-10 sm:text-2xl">
+        <Hoverlinks />
+      </div>
+      <div class="flex flex-col items-start">
+        <a
+          href={"https://www.drivethrurpg.com"}
+          class="relative h-8 sm:w-48 w-36"
+          target="_blank">
+          <Image
+            src={drivethroughrpg}
+            alt={"drive thru rpg"}
+            class="aspect-auto"
+          />
+        </a>
+        <div class="flex gap-1 justify-start">
+          <div class="md:w-8 md:h-8 h-6 w-6 hover:text-stone-400">
+            <a href={"https://twitter.com/"} target="_blank">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </div>
+          <div class="md:w-8 md:h-8 h-6 w-6 hover:text-stone-400">
+            <a href={"https://facebook.com/"} target="_blank">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+          </div>
+          <div class="md:w-8 md:h-8 h-6 w-6 hover:text-stone-400">
+            <a href={"https://youtube.com/"} target="_blank">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+          </div>
+          <div class="md:w-8 md:h-8 h-6 w-6 hover:text-stone-400">
+            <a href={"https://instagram.com/"} target="_blank">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </div>
+          <div class="md:w-8 md:h-8 h-6 w-6 hover:text-stone-400">
+            <a href={"https://github.com/scicluna/"} target="_blank">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="border-t border-stone-950 h-24 flex md:flex-row flex-col text-xs justify-around items-center w-full">
+    <p>Broken Spire Games 2023.All rights reserved.</p>
+  </div>
+</footer>

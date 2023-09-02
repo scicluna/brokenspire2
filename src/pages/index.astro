@@ -1,17 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Hero from "../components/server/Hero"
-import Statement from "../components/server/Statement"
-import ProductsNew from "../components/server/ProductsNew"
-import { Image } from "astro:assets"
-import brokenspirelogo from "../../src/images/brokenspirelogo.jpg"
+import Hero from "../components/server/Hero.astro"
+import Statement from "../components/server/Statement.astro"
+import ProductsNew from "../components/server/ProductsNew.astro"
 ---
 
 <Layout title="Broken Spire Games">
   <main class="flex flex-col">
-    <Hero>
-      <Image src={brokenspirelogo} alt="logo" class="h-full" />
-    </Hero>
+    <Hero />
     <Statement />
     <ProductsNew />
   </main>

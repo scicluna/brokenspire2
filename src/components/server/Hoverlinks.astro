@@ -1,0 +1,30 @@
+---
+const { pathname } = Astro.url
+---
+
+<>
+  <a
+    class={`w-fit hover:text-stone-400 ${
+      pathname.replace("/", "") === "" ? "text-stone-400" : null
+    }`}
+    href={"/"}>Home</a
+  >
+  <a
+    class={`w-fit hover:text-stone-400 ${
+      pathname.includes("/modules") ? "text-stone-400" : null
+    }`}
+    href={"/modules?page=1"}>Modules</a
+  >
+  <a
+    class={`w-fit hover:text-stone-400 ${
+      pathname.includes("/contact") ? "text-stone-400" : null
+    }`}
+    href={"/contact"}>Contact</a
+  >
+  <a
+    class={`w-fit hover:text-stone-400 ${
+      pathname.includes("/about") ? "text-stone-400" : null
+    }`}
+    href={"/about"}>About Us</a
+  >
+</>

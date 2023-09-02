@@ -16,7 +16,7 @@ export default function AllProducts({ PRODUCTSPERPAGE, page }: AllProductsProps)
                     </div>
                     <div className="relative h-[50dvh] w-full hover:opacity-90 overflow-hidden">
                         <a href={product.dtrpg}>
-                            <img src={product.img} alt={product.name} className="rounded-lg hover:scale-110 transition-all duration-300" />
+                            <img src={product.img.src} alt={product.name} className="rounded-lg hover:scale-110 transition-all duration-300" />
                         </a>
                     </div>
                 </div>
