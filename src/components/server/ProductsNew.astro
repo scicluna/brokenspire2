@@ -14,12 +14,12 @@ const newProducts = getNewProducts()
               <h2 class="text-2xl font-bold">{product.name}</h2>
               <p>{product.date}</p>
             </div>
-            <div class="relative h-[50dvh] hover:opacity-90 overflow-hidden">
+            <div class="relative h-[50dvh] hover:opacity-95 overflow-hidden">
               <a href={product.dtrpg} target="_blank">
                 <Image
                   src={product.img}
                   alt={product.name}
-                  class="object-fill rounded-lg hover:scale-110 transition-all duration-300"
+                  class="object-fill rounded-lg hover:scale-105 transition-all duration-300"
                 />
               </a>
             </div>
@@ -29,6 +29,6 @@ const newProducts = getNewProducts()
   </div>
   <div
     class="sm:w-3/4 w-full flex justify-end items-start hover:text-stone-400 sm:text-xl font-extrabold">
-    <a href={"/modules?page=1"}>All Modules</a>
+    <a href={"/modules/1"}>All Modules</a>
   </div>
 </section>
