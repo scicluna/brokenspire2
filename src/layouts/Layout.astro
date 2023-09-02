@@ -4,6 +4,7 @@ interface Props {
 }
 import Footer from "../components/server/Footer.astro"
 import Nav from "../components/client/Nav"
+import { ViewTransitions } from "astro:transitions"
 
 const { title } = Astro.props
 const { pathname } = Astro.url
@@ -18,8 +19,9 @@ const { pathname } = Astro.url
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body>
+  <body class="relative bg-stone-500 text-stone-50`">
     <Nav pathname={pathname} client:only />
     <slot />
     <Footer />

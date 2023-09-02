@@ -1,7 +1,7 @@
 ---
-import { products } from "../../../products/products"
-import AllProducts from "../../components/server/AllProducts"
-import Layout from "../../layouts/Layout.astro"
+import { products } from "../../../../products/products"
+import AllProducts from "../../../components/server/AllProducts.astro"
+import Layout from "../../../layouts/Layout.astro"
 const range = (n: number) => Array.from(Array(n).keys())
 
 export async function getStaticPaths({ paginate }) {

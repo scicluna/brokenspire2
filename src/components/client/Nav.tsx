@@ -14,7 +14,7 @@ export default function Nav({ pathname }: NavProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
                 </svg>
             </button>
-            <section className={`fixed top-0 left-0 h-full sm:w-1/6 w-3/4 bg-stone-600 z-30 transition-all duration-200 ${drawer ? 'translate-x-none' : '-translate-x-[400%]'}`}>
+            <section className={`fixed top-0 left-0 h-full sm:w-1/6 w-3/4 bg-stone-600 z-30 transition-all duration-500 ease-in-out ${drawer ? 'translate-x-none' : '-translate-x-[400%]'}`}>
                 <button className="absolute top-0 right-0 p-2" onClick={() => setDrawer(false)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8  hover:scale-105 hover:text-stone-400">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -29,7 +29,7 @@ export default function Nav({ pathname }: NavProps) {
                             </svg>
                             <p>Home</p>
                         </a>
-                        <a href={'/modules?page=1'} className={`flex items-center gap-2 hover:text-stone-400 ${pathname.includes('/modules') ? 'text-stone-400' : null}`} onClick={() => setDrawer(false)}>
+                        <a href={'/modules/all/1'} className={`flex items-center gap-2 hover:text-stone-400 ${pathname.includes('/modules') ? 'text-stone-400' : null}`} onClick={() => setDrawer(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
                             </svg>

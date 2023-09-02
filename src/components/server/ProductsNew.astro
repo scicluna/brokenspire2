@@ -15,7 +15,7 @@ const newProducts = getNewProducts()
               <p>{product.date}</p>
             </div>
             <div class="relative h-[50dvh] hover:opacity-95 overflow-hidden">
-              <a href={product.dtrpg} target="_blank">
+              <a href={`/modules/${product.name}`}>
                 <Image
                   src={product.img}
                   alt={product.name}
@@ -29,6 +29,6 @@ const newProducts = getNewProducts()
   </div>
   <div
     class="sm:w-3/4 w-full flex justify-end items-start hover:text-stone-400 sm:text-xl font-extrabold">
-    <a href={"/modules/1"}>All Modules</a>
+    <a href={"/modules/all/1"}>All Modules</a>
   </div>
 </section>

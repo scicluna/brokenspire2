@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets"
+import { products } from "../../../products/products"
+const { page, PRODUCTSPERPAGE } = Astro.props
+---
+
+<div class="grid sm:grid-cols-2 grid-cols-1 gap-5 sm:w-3/4 p-2">
+  {
+    products &&
+      products
+        .slice(PRODUCTSPERPAGE * (page - 1), PRODUCTSPERPAGE * page)
+        .map((product) => (
+          <div class="flex flex-col h-full">
+            <div class="w-full flex justify-between items-center">
+              <h2 class="sm:text-2xl text-lg font-bold">{product.name}</h2>
+              <p>{product.date}</p>
+            </div>
+            <div class="relative h-[50dvh] w-full hover:opacity-90 overflow-hidden">
+              <a href={`/modules/${product.name}`}>
+                <Image
+                  src={product.img}
+                  alt={product.name}
+                  class="rounded-lg hover:scale-110 transition-all duration-300"
+                />
+              </a>
+            </div>
+          </div>
+        ))
+  }
+</div>

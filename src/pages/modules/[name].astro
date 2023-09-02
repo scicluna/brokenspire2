@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets"
+import { productpaths } from "../../../products/products"
+import Layout from "../../layouts/Layout.astro"
+
+export function getStaticPaths() {
+  return productpaths
+}
+
+const { name } = Astro.params
+const { date, img, dtrpg, summary } = Astro.props
+---
+
+<Layout title="Broken Spire Games">
+  <section class="flex h-[100dvh]">
+    <div class="w-1/4 h-full">
+      <Image src={img} alt={name!} />
+    </div>
+    <div class="w-3/4 h-full">
+      <p class="whitespace-pre-line">{summary}</p>
+    </div>
+  </section>
+</Layout>
