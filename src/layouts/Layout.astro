@@ -21,7 +21,7 @@ const { pathname } = Astro.url
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="relative bg-stone-500 text-stone-50`">
+  <body class="relative bg-stone-500 text-stone-50 font-mono">
     <Nav pathname={pathname} client:only />
     <slot />
     <Footer />

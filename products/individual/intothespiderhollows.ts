@@ -1,0 +1,11 @@
+import spiderhollows from "../../src/images/modules/spiderhollows.jpg"
+import type { Product } from "../products"
+
+export const spiderHollows: Product = {
+    id: 0,
+    name: "Death in the Spider Hollows",
+    date: "8/17/2023",
+    img: spiderhollows,
+    dtrpg: "https://www.drivethrurpg.com/",
+    summary: `This adventure module is designed for a party of four level-1 adventurers and invites them into The Spider Hollows, a labyrinthine web of intertwining tunnels, deep ditches, and narrow fissures that run beneath the forest floor of an enchanted woodland.\n\nThe Spider Hollows is an unusual and perilous terrain marked by a shadowy network of natural pathways lined with glistening spider silk. The hollows are a realm of various spider-related creatures and present a multitude of challenges for a party venturing beneath the canopy.\n\nFor one of many reasons (see Hooks), our journey begins at The Webbed Entrance, a silk-bound portal that signals the threshold into the spiders' realm. Those who brave this foreboding threshold find themselves in a complex maze of subterranean passages leading to a variety of unique areas.\n\nEach area offers an array of encounters and discoveries. From dealing with the clever trapdoor spiders and confronting crafty ettercaps, to navigating the luminous Glow Worm Grotto or negotiating with silk-gathering goblins, every corner of the Hollow provides a fresh challenge or opportunity. Discovering treasures, ancient magic, and secrets about the Hollow's labyrinthine layout all become part of the journey.\n\nThe omnipresent danger within Spider Hollow is the enormous spider, called The Morvgenvaugh, that silently skitters above the canopy, too large to enter the fissures and tunnels, but always watching. The adventurers' goal is to navigate through The Spider Hollows, avoiding the attention of this monstrous arachnid and securing the treasures within the Hollow's depths.\n\nThis adventure module combines exploration, puzzle-solving, and a dash of combat to create a thrilling expedition into The Spider Hollows. The intricate structure of the Hollow allows each adventure to be unique, providing the GM with ample opportunities to customize the journey to suit their party's interests.`
+}
