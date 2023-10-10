@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import { productpaths } from "../../../products/products"
 import Layout from "../../layouts/Layout.astro"
+import drivethroughrpg from "../../../src/images/drivethrurpg-logo.png"
 
 export function getStaticPaths() {
   return productpaths
@@ -9,16 +10,24 @@ export function getStaticPaths() {
 
 const { name } = Astro.params
 const { date, img, dtrpg, summary } = Astro.props
-console.log(Astro.props)
 ---
 
 <Layout title="Broken Spire Games">
   <section class="flex h-[100dvh]">
-    <div class="w-1/4 h-full">
-      <Image src={img} alt={name!} />
+    <div class="w-1/2 h-full object-fill">
+      <Image src={img} alt={name!} class="p-2 h-full w-full" />
     </div>
-    <div class="w-3/4 h-full">
-      <p class="whitespace-pre-line">{summary}</p>
+    <div class="w-1/2 h-full p-2 flex flex-col gap-4">
+      <h1 class="text-5xl">{name}</h1>
+      <hr />
+      <p class="whitespace-pre-line overflow-auto text-lg">{summary}</p>
+      <a href={dtrpg} class="" target="_blank">
+        <Image
+          src={drivethroughrpg}
+          alt={"drive thru rpg"}
+          class="h-8 sm:w-48 w-36"
+        />
+      </a>
     </div>
   </section>
 </Layout>
