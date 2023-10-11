@@ -4,7 +4,7 @@ import { products } from "../../../products/products"
 const { page, PRODUCTSPERPAGE } = Astro.props
 ---
 
-<div class="grid sm:grid-cols-2 grid-cols-1 gap-5 sm:w-3/4 p-2">
+<div class="grid sm:grid-cols-2 grid-cols-1 gap-5 sm:w-7/12 p-2">
   {
     products &&
       products
@@ -15,12 +15,12 @@ const { page, PRODUCTSPERPAGE } = Astro.props
               <h2 class="sm:text-2xl text-lg font-bold">{product.name}</h2>
               <p>{product.date}</p>
             </div>
-            <div class="relative h-[50dvh] w-full hover:opacity-90 overflow-hidden">
+            <div class="relative h-[40dvh] w-full hover:opacity-90 overflow-hidden">
               <a href={`/modules/${product.name}`}>
                 <Image
                   src={product.img}
                   alt={product.name}
-                  class="rounded-lg hover:scale-110 transition-all duration-300"
+                  class="rounded-lg hover:scale-105 transition-all duration-500 h-full object-center object-fill"
                 />
               </a>
             </div>

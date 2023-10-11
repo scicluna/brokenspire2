@@ -4,7 +4,7 @@ import { Image } from "astro:assets"
 const newProducts = getNewProducts()
 ---
 
-<section class="w-full flex flex-col items-center sm:p-10 p-2 my-6">
+<section class="w-full flex flex-col items-center sm:p-10 p-2">
   <div class="grid sm:grid-cols-2 grid-cols-1 sm:gap-20 gap-4 sm:w-3/4">
     {
       newProducts &&
@@ -28,7 +28,7 @@ const newProducts = getNewProducts()
     }
   </div>
   <div
-    class="sm:w-3/4 w-full flex justify-end items-start hover:text-stone-400 sm:text-xl font-extrabold">
+    class="sm:w-3/4 w-full flex justify-end items-start sm:text-xl font-extrabold hover:text-stone-400 transition-all duration-500">
     <a href={"/modules/all/1"}>All Modules</a>
   </div>
 </section>

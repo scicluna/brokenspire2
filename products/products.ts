@@ -3,7 +3,7 @@ import { coinsForCorpses } from "./individual/coinsforcorpses";
 import { spiderHollows } from "./individual/intothespiderhollows";
 
 export const products: Product[] = [
-    coinsForCorpses, spiderHollows
+    coinsForCorpses, spiderHollows,
 ]
 
 export const productpaths = products.map(product => ({

@@ -10,30 +10,39 @@ export async function getStaticPaths({
 }: {
   paginate: PaginateFunction
 }) {
-  return paginate(products, { pageSize: 10 })
+  return paginate(products, { pageSize: 4 })
 }
 
 const { page } = Astro.props
 ---
 
 <Layout title="Broken Spire Games">
-  <section
-    class="h-full w-full flex flex-col items-center sm:p-10 py-12 min-h-[100dvh]">
-    <div class="flex sm:w-full sm:pl-20">
+  <section class="h-full w-full flex flex-col items-center min-h-[100dvh]">
+    <div class="flex w-full justify-center">
       <h1 class="text-3xl font-extrabold">All Modules</h1>
     </div>
     <AllProducts page={page.currentPage} PRODUCTSPERPAGE={page.size} />
     <div class="flex sm:w-3/4 justify-around p-2">
       <div class="w-full flex justify-start items-start text-xl font-bold">
-        {page.currentPage !== 1 && <a href={page.url.prev}>Prev</a>}
+        {
+          page.currentPage !== 1 && (
+            <a
+              class="hover:text-stone-400 transition-all duration-500"
+              href={page.url.prev}>
+              Prev
+            </a>
+          )
+        }
       </div>
       <div class="flex gap-2 text-xl font-bold">
         {
           range(Math.ceil(products.length / page.size)).map((_, i) => (
             <a
-              href={`/modules?page=${i + 1}`}
+              href={`/modules/all/${i + 1}`}
               class={`${
-                page.currentPage === i + 1 ? "text-stone-600" : "text-stone-300"
+                page.currentPage === i + 1
+                  ? "text-stone-400"
+                  : "text-stone-300 hover:text-stone-400 transition-all duration-500"
               }`}>
               {i + 1}
             </a>
@@ -41,7 +50,15 @@ const { page } = Astro.props
         }
       </div>
       <div class="w-full flex justify-end items-start text-xl font-bold">
-        {page.currentPage !== page.lastPage && <a href={page.url.next}>Next</a>}
+        {
+          page.currentPage !== page.lastPage && (
+            <a
+              class="hover:text-stone-400 transition-all duration-500"
+              href={page.url.next}>
+              Next
+            </a>
+          )
+        }
       </div>
     </div>
   </section>
