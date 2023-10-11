@@ -15,12 +15,12 @@ const { page, PRODUCTSPERPAGE } = Astro.props
               <h2 class="sm:text-2xl text-lg font-bold">{product.name}</h2>
               <p>{product.date}</p>
             </div>
-            <div class="relative h-[40dvh] w-full hover:opacity-90 overflow-hidden">
+            <div class="relative h-[40dvh] w-full hover:opacity-90 overflow-hidden rounded-lg">
               <a href={`/modules/${product.name}`}>
                 <Image
                   src={product.img}
                   alt={product.name}
-                  class="rounded-lg hover:scale-105 transition-all duration-500 h-full object-center object-fill"
+                  class="rounded-lg h-fit hover:scale-105 transition-all duration-500 object-bottom object-fill"
                 />
               </a>
             </div>

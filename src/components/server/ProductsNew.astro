@@ -14,12 +14,12 @@ const newProducts = getNewProducts()
               <h2 class="text-2xl font-bold">{product.name}</h2>
               <p>{product.date}</p>
             </div>
-            <div class="relative h-[50dvh] hover:opacity-95 overflow-hidden">
+            <div class="relative h-[50dvh] hover:opacity-95 overflow-hidden rounded-lg ">
               <a href={`/modules/${product.name}`}>
                 <Image
                   src={product.img}
                   alt={product.name}
-                  class="object-fill rounded-lg hover:scale-105 transition-all duration-300"
+                  class="object-fill h-fit hover:scale-105 transition-all duration-300 overflow-hidden"
                 />
               </a>
             </div>
